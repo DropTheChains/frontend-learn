@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue</title>
+</head>
+<body>
+    <label for="input">Enter number:</label>
+    <input id="input" type="text"/>
+    <button>Generate integer squares</button>
+    <br/>
+
+    <label>output:</label>
+
+    <p></p>
+</body>
+<script>
+    const input = document.querySelector("input");
+    const btn = document.querySelector("button");
+    const para = document.querySelector("p");
+
+    btn.addEventListener("click",() => {
+        let num = input.value;
+        input.value = "";
+        input.focus();
+        para.textContent = "";
+        for(let i = 1; i <= num; i++ ){
+            let sqRoot = Math.sqrt(i);
+            if(Math.floor(sqRoot) !== sqRoot){
+                continue;
+            }
+            para.textContent += i + " ";
+        }
+        
+    })
+</script>
+</html>
