@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+    let myData = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
+    let myArray = myData.split(",");
+    let item = myArray.splice(0,1);
+    console.log(item);
+    let item2 = myArray.splice(myArray.length - 1,1);
+
+    myArray.splice(0,1,'ceshi');
+    
+</script>    
+</body>
+</html>

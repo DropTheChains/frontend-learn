@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串</title>
+
+</head>
+<body>
+    <button>点这里</button>
+    <div id="greeting"></div>
+    <script>
+        const string = '这场革命将不会被电视转播。'
+        console.log(string)
+    
+        const single = '单引号';
+        const double = "双引号";
+        const backtick = `反引号`;
+        console.log(single);
+        console.log(double);
+        console.log(backtick);
+    
+        const name = "克里斯";
+        const greeting = `你好，${name}`;
+        console.log(greeting);
+
+
+    
+        const button = document.querySelector("button");
+    
+        function greet(){
+            const name = prompt("你叫什么名字");
+            //window.prompt()函数 要求用户在弹出的对话框中回答一个问题然后将用户的输入存储在给定的变量中
+            const greeting = document.querySelector("#greeting");
+            greeting.textContent = `你好，${name}！很高心认识你。`
+        }
+        button.addEventListener("click",greet);
+    
+    </script> 
+</body>
+</html>
